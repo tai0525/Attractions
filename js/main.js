@@ -51,9 +51,3 @@ $(document).ready(function() {
         })
     });
 });
-
-$('goTop').click(function (e) {
-    $('html, body').animate({
-        scrollTop:0
-    },800);
-});

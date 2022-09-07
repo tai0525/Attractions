@@ -152,23 +152,6 @@ select.city {
     white-space: normal;
 }
 
-.footer {
-    background: #474E38;
-    height: 92px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   
-    h3 {
-        margin-top: 15px;
-        color: #fff;
-    }
-}
-.goTop {
-    position: absolute;
-    right: 0;
-}
 
 @media  (max-width: 767px) {
     .header,
@@ -210,9 +193,6 @@ select.city {
     .noresult,
     .showsearch {
         padding-top: 20px;
-    }
-    .footer {
-        display: none;
     }
 }
 
