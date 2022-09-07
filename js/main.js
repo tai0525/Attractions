@@ -35,10 +35,10 @@ $(document).ready(function() {
                             </div>`
                         $('#searchpage > .row').append(resultContent);
 
-                    } else if (cityVal == '請選擇') {
+                    } else if (cityVal == '請選擇行政區') {
                         showSearch.hide();
                         showNoResult.show();
-                        showNoResult.text('查無資料');
+                        showNoResult.text('請選擇行政區');
                         $('.item').remove();
                     }
                 }
@@ -50,4 +50,10 @@ $(document).ready(function() {
             }
         })
     });
+});
+
+$('goTop').click(function (e) {
+    $('html, body').animate({
+        scrollTop:0
+    },800);
 });

@@ -130,6 +130,24 @@ select.city {
   white-space: normal;
 }
 
+.footer {
+  background: #474E38;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer h3 {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.goTop {
+  position: absolute;
+  right: 0;
+}
+
 @media (max-width: 767px) {
   .header,
 .coverbg {
@@ -140,7 +158,7 @@ select.city {
     font-weight: normal;
   }
   .selectbox {
-    width: 150px;
+    width: 200px;
   }
   .item {
     height: 450px;
