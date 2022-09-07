@@ -137,6 +137,7 @@ select.city {
   }
   .header .title {
     font-size: 30px;
+    font-weight: normal;
   }
   .selectbox {
     width: 150px;
