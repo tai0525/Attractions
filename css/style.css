@@ -6,34 +6,94 @@ body {
 .header {
   width: 100%;
   height: 450px;
-  background: url("../img/bg.jpg") no-repeat center center;
-  background-size: cover;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.header .title {
-  color: white;
-  font-weight: bold;
-  font-size: 55px;
-  letter-spacing: 1px;
-  z-index: 1;
-  text-shadow: -1px -1px 0px greenyellow, 3px 3px 0px green;
+.header li {
+  list-style: none;
+  position: absolute;
 }
-
-.coverbg {
+.header .coverbg1 {
   width: 100%;
   height: 450px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: url("../img/bg.jpg") no-repeat center center;
+  background-size: cover;
+  -webkit-animation-name: bannerAnimation;
+          animation-name: bannerAnimation;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
 }
+.header .coverbg2 {
+  width: 100%;
+  height: 450px;
+  background: url("../img/bg01.jpg") no-repeat center center;
+  background-size: cover;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.header .title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 55px;
+  letter-spacing: 1px;
+  z-index: 1;
+  text-shadow: 13px 13px 10px rgba(0, 0, 0, 0.3);
+}
 
+@-webkit-keyframes bannerAnimation {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  /* 變換背景時間縮短在 10% 內，50% - 90% 是第二張圖 */
+  50% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bannerAnimation {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  /* 變換背景時間縮短在 10% 內，50% - 90% 是第二張圖 */
+  50% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 select.city {
   background-color: rgba(255, 255, 255, 0.7);
   -webkit-appearance: none;
@@ -132,7 +192,8 @@ select.city {
 
 @media (max-width: 767px) {
   .header,
-.coverbg {
+.coverbg1,
+.coverbg2 {
     height: 280px;
   }
   .header .title {
@@ -140,7 +201,7 @@ select.city {
     font-weight: normal;
   }
   .selectbox {
-    width: 200px;
+    width: 150px;
   }
   .item {
     height: 450px;

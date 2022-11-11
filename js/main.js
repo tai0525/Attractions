@@ -35,10 +35,10 @@ $(document).ready(function() {
                             </div>`
                         $('#searchpage > .row').append(resultContent);
 
-                    } else if (cityVal == '請選擇行政區') {
+                    } else if (cityVal == '請選擇') {
                         showSearch.hide();
                         showNoResult.show();
-                        showNoResult.text('請選擇行政區');
+                        showNoResult.text('查無資料');
                         $('.item').remove();
                     }
                 }

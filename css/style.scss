@@ -5,8 +5,8 @@ body {
 .header {
     width: 100%;
     height: 450px;
-    background: url('../img/bg.jpg') no-repeat center center;
-    background-size: cover;
+    // background: url('../img/bg.jpg') no-repeat center center;
+    // background-size: cover;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -21,26 +21,77 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+
+    li {
+        list-style: none;
+        position: absolute;
+
+    }
+
+    .coverbg1 {
+        width: 100%;
+        height: 450px;
+        background: url('../img/bg.jpg') no-repeat center center;
+        background-size: cover;
+        // background-color: rgba(0, 0, 0, 0.5);
+        animation-name: bannerAnimation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .coverbg2 {
+        width: 100%;
+        height: 450px;
+        background: url('../img/bg01.jpg') no-repeat center center;
+        background-size: cover;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+    }
+
     .title {
+        text-align: center;
+        margin-bottom: 1.5rem;
         color: white;
-        font-weight: bold;
+        font-weight: 700;
+        font-style: italic;
         font-size: 55px;
         letter-spacing: 1px;
         z-index: 1;
-        text-shadow: -1px -1px 0px greenyellow,
-        3px 3px 0px green;
+        text-shadow: 13px 13px 10px  rgba(0, 0, 0, 0.3);
     }
 }
 
-.coverbg {
-    width: 100%;
-    height: 450px;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+
+
+@keyframes bannerAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    /* 變換背景時間縮短在 10% 內，50% - 90% 是第二張圖 */
+    50% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 select.city {
@@ -74,6 +125,7 @@ select.city {
     display: -ms-flexbox;
     display: flex;
     position: relative;
+
     &::after {
         width: 50px;
         height: 50px;
@@ -91,6 +143,7 @@ select.city {
         text-align: center;
         line-height: 40px;
     }
+
     &:hover::after {
         color: #3f51b5;
     }
@@ -123,6 +176,7 @@ select.city {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
     img {
         width: 25%;
         height: auto;
@@ -130,11 +184,13 @@ select.city {
         -ms-flex: 1;
         flex: 1;
     }
+
     .info {
         width: 75%;
         padding-left: 20px;
         font-size: 16px;
     }
+
     span.title {
         font-size: 18px;
         font-weight: bold;
@@ -152,21 +208,25 @@ select.city {
     white-space: normal;
 }
 
+@media (max-width: 767px) {
 
-@media  (max-width: 767px) {
     .header,
-    .coverbg {
+    .coverbg1,
+    .coverbg2 {
         height: 280px;
     }
+
     .header {
         .title {
             font-size: 30px;
             font-weight: normal;
         }
     }
+
     .selectbox {
-        width: 200px;
+        width: 150px;
     }
+
     .item {
         height: 450px;
         -webkit-box-orient: vertical;
@@ -174,22 +234,27 @@ select.city {
         -ms-flex-direction: column;
         flex-direction: column;
         margin: 20px;
+
         img,
         .info {
             width: 100%;
         }
+
         img {
             height: 200px;
         }
+
         .info {
             padding-top: 10px;
             padding-left: 0px;
         }
     }
+
     .description {
         height: 135px;
         -webkit-line-clamp: 6;
     }
+
     .noresult,
     .showsearch {
         padding-top: 20px;
