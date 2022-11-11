@@ -49,7 +49,7 @@ body {
   text-align: center;
   margin-bottom: 1.5rem;
   color: white;
-  font-weight: 700;
+  font-weight: bold;
   font-style: italic;
   font-size: 55px;
   letter-spacing: 1px;
@@ -201,7 +201,7 @@ select.city {
     font-weight: normal;
   }
   .selectbox {
-    width: 150px;
+    width: 200px;
   }
   .item {
     height: 450px;
