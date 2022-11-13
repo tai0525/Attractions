@@ -182,10 +182,7 @@ select.city {
 
 .description {
   height: 90px;
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   white-space: normal;
 }
@@ -221,6 +218,8 @@ select.city {
   }
   .description {
     height: 135px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     -webkit-line-clamp: 6;
   }
   .noresult,

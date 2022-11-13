@@ -63,8 +63,7 @@ body {
         letter-spacing: 1px;
         z-index: 1;
         text-shadow: 10px 5px 10px rgb(241, 138, 59, 0.8),
-        13px 13px 10px  rgba(198, 189, 159, 0.7)
-        ;
+        13px 13px 10px  rgba(198, 189, 159, 0.7);
         
     }
 }
@@ -197,17 +196,16 @@ select.city {
 
 .description {
     height: 90px;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
+    // overflow: hidden;
+    // -o-text-overflow: ellipsis;
+    // text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    // -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     white-space: normal;
 }
 
 @media (max-width: 767px) {
-
     .header,
     .coverbg1,
     .coverbg2 {
@@ -250,6 +248,9 @@ select.city {
 
     .description {
         height: 135px;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
         -webkit-line-clamp: 6;
     }
 
