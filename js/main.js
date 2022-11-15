@@ -26,7 +26,7 @@ $(document).ready(function() {
                         showSearch.show();
                         // console.log(data[i].鄉鎮市區);
                         let resultContent = `<div class="col-lg-12 item">
-                                <img src="./img/no-image.jpg">
+                                <img src="${data[i].圖片}">
                                 <div class="info">
                                     <div class="name"><span class="title">景點名稱：</span>${data[i].名稱}</div>
                                     <div class="address"><span class="title">地址：</span>${data[i].地址}</div>
